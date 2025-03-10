@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icon Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+ <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+<!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+ <!-- Font Awesome for icons --> 
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <title> Original </title>
+</head>
+<body>
+
+<section>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+         <img src="/images/Navbar.PNG" alt="">
+
+         <!-- Toggle Button for Mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item pe-5">
+                  <a class="nav-home active" aria-current="page" href="#Home">Home</a>
+                </li>
+                <li class="nav-item pe-5">
+                    <a class="nav-about" href="image-to-text.html">Image to Text</a>
+                </li>
+
+
+                <li class="nav-item pe-5">
+                    <a class="nav-services" href="tools.html">Tools</a>
+                </li>
+
+                <!-- <li class="nav-item pe-5">
+                    <a class="nav-services" href="#Tools">Tools</a>
+                </li> -->
+                
+                <li class="nav-item pe-5">
+                    <a class="nav-contact" href="blog.html">Blog</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+   
+
+    <section>
+            <div class="container">
+                <div class="row">
+              <!-- jpg to pdf file                    -->
+
+             <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+            <!-- another code start from here -->
+            <div class="converter-card">
+                        
+    
+                        <!-- File Input -->
+                        <input type="file" id="fileInput" class="file-input" accept="image/jpeg, image/png" multiple>
+                        <label for="fileInput" class="file-label">+ Add Files</label>
+    
+                        <!-- Uploaded Files -->
+                        <div id="uploadedFiles" class="uploaded-files"></div>
+    
+                        <!-- Conversion Method -->
+                        <div id="conversionMethod" class="mt-4" style="display: none;">
+                            <label>Conversion Method:</label>
+                            <div>
+                                <input type="radio" id="separate" name="method" value="separate" checked>
+                                <label for="separate">Separate PDFs</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="merge" name="method" value="merge">
+                                <label for="merge">Merge into a single PDF</label>
+                            </div>
+                        </div>
+    
+                        <!-- Convert Button -->
+                        <button id="convertBtn" class="btn btn-primary btn-convert" style="display: none;">Convert</button>
+    
+                        <!-- Loading Spinner -->
+                        <div id="loadingSpinner" class="loading-spinner"></div>
+    
+                        <!-- PDF Preview -->
+                        <div id="pdfPreview" class="pdf-preview">
+                            <p>PDF File: <span id="pdfFileName"></span> (<span id="pdfFileSize"></span>)</p>
+                            <a id="downloadLink" class="btn btn-success">Download PDF</a>
+                            <div class="back-button" onclick="resetConverter()">✕</div>
+                        </div>
+                    </div>
+     <!-- End code from here -->
+                        </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Body Section Code start from here -->
+    <div class="container my-3">
+        <div class="row justify-content-center">
+                <!-- Uploaded Files Section -->
+                <div id="uploadedFiles" class="uploaded-files"></div>
+    
+                <!-- Conversion Method (Merge/Separate) -->
+                <div id="conversionMethod" style="display: none;">
+                    <label><input type="radio" name="method" value="merge" checked> Merge into one PDF</label>
+                    <label><input type="radio" name="method" value="separate"> Separate PDFs</label>
+                </div>
+    
+                <!-- Convert Button -->
+                <button id="convertBtn" class="btn btn-success mt-3" style="display: none;">Convert</button>
+    
+                <!-- Loading Spinner -->
+                <div id="loadingSpinner" class="loading-spinner" style="display: none;"></div>
+    
+                <!-- PDF Preview Section -->
+                <div id="pdfPreview" class="pdf-preview" style="display: none;">
+                    <h4>Converted PDF</h4>
+                    <p>File Name: <span id="pdfFileName"></span></p>
+                    <p>File Size: <span id="pdfFileSize"></span></p>
+                    <a id="downloadLink" class="btn btn-primary">Download PDF</a>
+                    <div class="back-button" onclick="resetConverter()">&#10006;</div>
+                </div>
+            </div>
+
+            <!-- Related Tools Section -->
+            <div>
+                <div>
+                    <h1>Related Tools</h1>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration pt-2">
+                    <a href="/pdf to jgp.html">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-jpg.png" alt="" width="30px" height="30px">
+                            <h6>PDF to JPG Converter</h6>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="row pb-3 pt-4">
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center right_border">
+                    <div class="text-center">
+                        <img src="/images/free.png" class="img-fluid" width="30px" height="30px">
+                        <h5>Turn jpg into PDF for Free</h5>
+                        <div class="my-2 horizontal_line"></div>
+                        <p>convert image to PDF free of cost without any restrictions. It easily handles multiple conversions of the jpg files.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center right_border">
+                    <div class="text-center">
+                        <img src="/images/computers.png" alt="" width="30px" height="30px" class="img-fluid">
+                        <h5>Compatible With All Platforms</h5>
+                        <div class="my-2 horizontal_line"></div>
+                        <p>This photo to pdf converter is compatible with all platforms. You need only an internet connection and device just open your browser (Safari, Chrome, Mozilla, Opera, Linux) and search itspdf jpg converter.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="text-center">
+                        <img src="/images/delete.png" alt="" width="30px" height="30px" class="img-fluid">
+                        <h5>Files are Automatically Deleted</h5>
+                        <div class="my-2 horizontal_line"></div>
+                        <p>No matter what type of JPG images want to convert into PDF documents. Our system does not keep your file as a recode. When the conversion process is completed your file is removed automatically from our system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Convert Section -->
+            <div>
+                <h3>Best Feature:</h3>
+                <p>This online image to PDF converter will function to extract text from an image and store it into PDF while preserving the original formatting.</p>
+                <h4>How to Convert JPG to PDF Online?</h4>
+                <p>Following these simple steps to turn jpg to pdf.</p>
+                <h4>Step #1:</h4>
+                <p>Upload single or multiple files that you want to convert into pdf files. Now choose the options such as drag and drop, Dropbox, and URL upload are also available. This OCR jpg to pdf converter has the ability to convert separate or combined images into a single PDF format.</p>
+                <h4>Step #2:</h4>
+                <p>Click on the convert button to change jpg to pdf.</p>
+                <h4>Step#3:</h4>
+                <p>When the conversion process is complete click on the download button and your file saved on your system. You can also reconvert into JPG using our <a href="pdf to jgp.html" style="text-decoration: none;">pdf to jpg converter</a>.</p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div>
+                <h4>FAQ’s:</h4>
+                <h5>Will my converted PDF files have the same image quality as my original file?</h5>
+                <p>Yes, our jpg to pdf converter will turn jpg into pdf while retaining the same quality as your original file.</p>
+                <h4>Is it safe to use photo to PDF converter?</h4>
+                <p>You don’t need to worry about the files privacy as our systems make automatic deletion for the processed files.</p>
+                <h4>What type of image files can I convert to PDF?</h4>
+                <p>This JPG to PDF converter is capable of converting a wide variety of image formats for free of cost.</p>
+                <h4>How do I combine multiple photos into a single PDF?</h4>
+                <p>There is no tricky method to combine jpg to pdf, simply drag and drop photos into this image to pdf converter and choose the “merge all images into a single pdf” option to combine them into a single PDF.</p>
+                <p>Other languages: <a href="" style="text-decoration: none;">JPG PDF Çevirme</a>, <a href="" style="text-decoration: none;">Ubah JPG ke PDF</a>, <a href="" style="text-decoration: none;">Konwerter JPG na PDF</a>, <a href="" style="text-decoration: none;">JPG in PDF Umwandeln</a>, <a href="" style="text-decoration: none;">Převod JPG do PDF</a>, <a href="" style="text-decoration: none;">Converter JPG em PDF</a>, <a href="" style="text-decoration: none;">Convertir JPG en PDF</a>,<a href="" style="text-decoration: none;">Convertir JPG a PDF</a>,<a href="" style="text-decoration: none;">Конвертер JPG в PDF</a>,<a href="" style="text-decoration: none;">Converti da JPG a PDF</a>,<a href="" style="text-decoration: none;">Μετατροπη JPG σε PDF</a>,<a href="" style="text-decoration: none;">แปลงไฟล์ JPG เป็น PDF</a>,<a href="" style="text-decoration: none;">Konvertera JPG to PDF</a>,<a href="" style="text-decoration: none;">Chuyển JPG sang PDF</a>,<a href="" style="text-decoration: none;">JPG PDF Konvertáló</a>,<a href="" style="text-decoration: none;">JPG PDF 変換</a>,<a href="" style="text-decoration: none;">JPG PDF 변환</a>,<a href="" style="text-decoration: none;">تحويل الصور الى PDF</a></p>
+            </div>
+        </div>
+    </div>
+     <!-- Body Section Code Ended the above -->
+
+
+ 
+
+
+ <!-- Footer (same as your main page) -->
+ <footer class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-12 col-sm-12 ps-4">
+                <div class="border-end">
+                    <div class="py-2 text-start">
+                        <img loading="lazy" src="/images/Navbar.PNG" width="120px" height="40px">
+                    </div>
+                    <p class="text-white small mt-3">itspdf is a file conversion tool used for Android and iOS. The online tool not only converts files to and from PDFs but also provides opportunities for merging, splitting, and compressing PDF files.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 footer-bdr-left ps-4">
+                <div class="border-end">
+                    <h4 class="other_link footer_h_clr">Other Links</h4>
+                    <ul class="text-white list-unstyled">
+                        <li><a class="text-white" href="https://www.itspdf.com">Home</a></li>
+                        <li><a class="text-white" href="https://www.itspdf.com/home/about">About</a></li>
+                        <li><a class="text-white" href="https://www.itspdf.com/tools">Tools</a></li>
+                        <li><a class="text-white" href="https://www.itspdf.com/blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 footer-bdr-left ps-4">
+                <h4 class="fw-bold footer_h_clr">Follow Us:</h4>
+                <div class="row me-2 me-lg-5">
+                    <a href="https://www.facebook.com/itspdfofficial/" target="_blank" class="col-2 p_8">
+                        <img loading="lazy" src="https://www.itspdf.com/assets/imgs/facebook.png" alt="Facebook" width="30" height="30">
+                    </a>
+                    <a href="https://www.instagram.com/its_pdf_official/" target="_blank" class="col-2 p_8">
+                        <img loading="lazy" src="https://www.itspdf.com/assets/imgs/instagram.png" alt="Instagram" width="30" height="30">
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 border-top border-2 mt-2 px-0">
+                        <ul class="text-white list-unstyled mt-2">
+                            <li><a class="text-white" href="https://www.itspdf.com/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conatiner-fluid copy-right-row">
+            <div class="container ">
+              <div class="row ">
+                <div class="col-12 my-2 d-flex justify-content-between">
+                  <div>
+                    <p class=" text-white my-0 ps-4">© Copyright 2025 by <a class="text-white" href="https://www.itspdf.com" target="_blank">www.itspdf.com</a></p>
+                  </div>
+                  <div>
+                    <div class="d-flex no-gap">
+                      <li><a class="text-white border-end pe-3" href="https://www.itspdf.com/policy">Privacy Policy</a></li>
+                      <li><a class="text-white ps-3" href="https://www.itspdf.com/termsandconditions">Terms &amp; Conditions</a></li>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+<!-- Footer Ended Here -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      const { jsPDF } = window.jspdf;
+    </script>
+ 
+    <!-- Bootstrap JS and dependencies -->
+     <script src="script.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</html>

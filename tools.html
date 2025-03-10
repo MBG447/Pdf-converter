@@ -1,0 +1,405 @@
+<!-- ********** Code start from here -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include the same CSS and JS files as in your main page -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Tools Page</title>
+    <style>
+        /* Custom CSS for row-wise display */
+        .tools-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px; /* Adjust the gap between items */
+        }
+        .converter-card {
+            flex: 1 1 calc(33.333% - 16px); /* Adjust the width of each card */
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .converter-card img {
+            margin-right: 12px;
+        }
+        .converter-card h6 {
+            margin: 0;
+        }
+        .converter-card i {
+            margin-left: auto; /* Push the icon to the right */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (same as your main page) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <img src="/images/Navbar.PNG" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item pe-5">
+                        <a class="nav-home active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item pe-5">
+                        <a class="nav-about" href="image-to-text.html">Image to Text</a>
+                    </li>
+                    <li class="nav-item pe-5">
+                        <a class="nav-services" href="/tools.html">Tools</a>
+                    </li>
+                    <li class="nav-item pe-5">
+                        <a class="nav-contact" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- All PDF Converters  -->
+<section>
+    <div class="container pt-5">
+        <div class="row">
+            <div class="d-flex justify-content-between justify-content-between align-items-center">
+                <h1 class="pdf-text">PDF Converters</h1>
+            </div>
+        </div> 
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-jpg.png" alt="" width="30px" height="30px">
+                            <h6>PDF to JPG Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="#">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-png.png" alt="" width="30px" height="30px">
+                            <h6>PDF to PNG Converter</h6>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="#">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-bmp.png" alt="" width="30px" height="30px">
+                            <h6>PDF to BMP Converter</h6>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="#">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-tiff.png" alt="" width="30px" height="30px">
+                            <h6>PDF to TIFF Converter</h6>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="#">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-word.png" alt="" width="30px" height="30px">
+                            <h6>PDF to Word Converter</h6>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="#">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-powerpoint.png" alt="" width="30px" height="30px">
+                            <h6>PDF to PowerPoint Converter</h6>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/jpg-to-pdf.png" alt="" width="30px" height="30px">
+                            <h6>JPG to PDF Converter</h6> 
+                            <i class="bi bi-chevron-right" style="visibility: hidden;"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/png-to-pdf.png" alt="" width="30px" height="30px">
+                            <h6>PNG to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/bmp-to-pdf.png" alt="" width="30px" height="30px">
+                            <h6>BMP to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/tiff-to-pdf.png" alt="" width="30px" height="30px">
+                            <h6>TIFF to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/word-to-pdf.png" alt="" width="30px" height="30px">
+                            <h6>Word to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/excel-to-pdf.png" alt="" width="30px" height="30px">
+                            <h6>Excel to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/powerpoint-to-pdf.png" alt="" width="30px" height="30px">
+                            <h6>PowerPoint to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/image-to-text.png" alt="" width="30px" height="30px">
+                            <h6>Image to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-text.png" alt="" width="30px" height="30px">
+                            <h6>Pdf to Text Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="/pdf-excel.html">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-excel.png" alt="" width="30px" height="30px">
+                            <h6>pdf to excel Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/heic-to-png.png" alt="" width="30px" height="30px">
+                            <h6>HEIC to PNG Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/heic-to-jpg.png" alt="" width="30px" height="30px">
+                            <h6>HEIC to JPG Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/heic-to-pdf (1).png" alt="" width="30px" height="30px">
+                            <h6>HEIC to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/pdf-to-csv.png" alt="" width="30px" height="30px">
+                            <h6>PDF to CSV Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                    <a href="">
+                        <div class="converter-card">
+                            <img src="/images/vcf-to-pdf.png" alt="" width="30px" height="30px">
+                            <h6>VCF to PDF Converter</h6>
+                             <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Tools Page Content -->
+    <section>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-6 pb-2 pt-4">
+                    <h1 class="pdf-text">PDF Tools</h1>
+                </div>
+
+                <!-- Tools Cards -->
+                <div class="tools-row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                        <a href="">
+                            <div class="converter-card">
+                                <img src="/images/compress-pdf.png" alt="" width="30px" height="30px">
+                                <h6 class="ps-3">Compress PDF</h6>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                        <a href="">
+                            <div class="converter-card">
+                                <img src="/images/merge-pdf.png" alt="" width="30px" height="30px">
+                                <h6 class="ps-3">Merge PDF</h6>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
+                        <a href="">
+                            <div class="converter-card">
+                                <img src="/images/split-pdf.png" alt="" width="30px" height="30px">
+                                <h6 class="ps-3">Split PDF</h6>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Page Data -->
+    <!-- <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Why Use Our Tools?</h2>
+                <p>Our PDF tools are designed to make your life easier. Whether you need to compress, merge, or split PDFs, our tools are fast, reliable, and free to use. Here are some reasons why you should choose us:</p>
+                <ul>
+                    <li>100% Free - No hidden charges.</li>
+                    <li>No installation required - Use directly in your browser.</li>
+                    <li>Secure - Your files are processed securely and deleted after conversion.</li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+     <!-- Footer (same as your main page) -->
+<footer class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-12 col-sm-12 ps-4">
+                <div class="border-end">
+                    <div class="py-2 text-start">
+                        <img loading="lazy" src="/images/Navbar.PNG" width="120px" height="40px">
+                    </div>
+                    <p class="text-white small mt-3">itspdf is a file conversion tool used for Android and iOS. The online tool not only converts files to and from PDFs but also provides opportunities for merging, splitting, and compressing PDF files.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 footer-bdr-left ps-4">
+                <div class="border-end">
+                    <h4 class="other_link footer_h_clr">Other Links</h4>
+                    <ul class="text-white list-unstyled">
+                        <li><a class="text-white" href="https://www.itspdf.com">Home</a></li>
+                        <li><a class="text-white" href="https://www.itspdf.com/home/about">About</a></li>
+                        <li><a class="text-white" href="https://www.itspdf.com/tools">Tools</a></li>
+                        <li><a class="text-white" href="https://www.itspdf.com/blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 footer-bdr-left ps-4">
+                <h4 class="fw-bold footer_h_clr">Follow Us:</h4>
+                <div class="row me-2 me-lg-5">
+                    <a href="https://www.facebook.com/itspdfofficial/" target="_blank" class="col-2 p_8">
+                        <img loading="lazy" src="https://www.itspdf.com/assets/imgs/facebook.png" alt="Facebook" width="30" height="30">
+                    </a>
+                    <a href="https://www.instagram.com/its_pdf_official/" target="_blank" class="col-2 p_8">
+                        <img loading="lazy" src="https://www.itspdf.com/assets/imgs/instagram.png" alt="Instagram" width="30" height="30">
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 border-top border-2 mt-2 px-0">
+                        <ul class="text-white list-unstyled mt-2">
+                            <li><a class="text-white" href="https://www.itspdf.com/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conatiner-fluid copy-right-row">
+            <div class="container ">
+              <div class="row ">
+                <div class="col-12 my-2 d-flex justify-content-between">
+                  <div>
+                    <p class=" text-white my-0 ps-4">© Copyright 2025 by <a class="text-white" href="https://www.itspdf.com" target="_blank">www.itspdf.com</a></p>
+                  </div>
+                  <div>
+                    <div class="d-flex no-gap">
+                      <li><a class="text-white border-end pe-3" href="https://www.itspdf.com/policy">Privacy Policy</a></li>
+                      <li><a class="text-white ps-3" href="https://www.itspdf.com/termsandconditions">Terms &amp; Conditions</a></li>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+<!-- Footer Ended Here -->
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
