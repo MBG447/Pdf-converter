@@ -99,6 +99,49 @@
            display: none;
            margin-top: 10px;
        }
+       .url_upload {
+    width: 100%;
+    position: relative;
+    border-radius: 12px;
+                   }
+      /* .add_url{
+        position: absolute;
+        justify-items: end !important;
+        justify-content: end !important;
+      }              */
+      .url-input-bar {
+    margin-top: 10px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between; /* Ensures the input and button are on opposite sides */
+}
+
+
+.add_url {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 100%; /* Ensures the button height matches the input field */
+    margin-left: 10px; /* Add space between input and button if needed */
+    background: #312E67;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 95%;
+    border: none;
+    color: #fff;
+    border-radius: 0 12px 12px 0;
+}
+.url-text{
+    width: % !important;
+}
+
+.url_upload {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
     </style>
 </head>
 <body>
@@ -145,20 +188,27 @@
                         <a href="/choose file jpg to pdf.html" style="text-decoration: none;">
                             <button class="btn btn-primary mt-3" onclick="document.getElementById('fileInput').click()">Choose Files</button>
                         </a>
-                        <input type="file" id="fileInput" class="file-input" accept=".jpg, .jpeg, .png, .gif, .jtif, .pdf, .webp, .bmp, .heif, .heic">
+                        
                         <div class="pt-2">
                             <div class="d-flex icon-links pt-3 justify-content-center">
-                                <div class="drop-zone text-center">
-                                    <img src="/images/link.svg" alt="" class="btn img-fluid" onclick="toggleUrlInput()"> <span>Enter URL</span>
-                                    <img src="/images/dropbox.svg" class="btn img-fluid" onclick="redirectToDropbox()"> <span>Dropbox</span>
+                                <input type="file" id="fileInput" class="file-input" accept=".jpg, .jpeg, .png, .gif, .jtif, .pdf, .webp, .bmp, .heif, .heic">
+                                <div class="d-flex drop-zone text-center">
+                                    <div>
+                                        <img src="/images/link.svg" alt="" class="btn img-fluid" onclick="toggleUrlInput()"> <span onclick="toggleUrlInput()" class="url-text">Enter URL</span>
+                                    </div>
+                                    <img src="/images/dropbox.svg" class="btn img-fluid" onclick="redirectToDropbox()"> <span onclick="redirectToDropbox()">Dropbox</span>
                                 </div>
                             </div>
                         </div>
+
                         <!-- URL Input Bar -->
-                        <div id="urlInputBar" class="url-input-bar">
-                            <input type="text" id="urlInput" class="form-control" placeholder="Paste your URL here">
-                            <button class="btn btn-success mt-2" onclick="addUrl()">Add URL</button>
-                        </div>
+<div id="urlInputBar" class="url-input-bar">
+    <div class="input-group">
+        <input type="text" name="url_upload" id="urlInput" class="form-control url_upload py-2" placeholder="Paste your URL here">
+            <button class="btn btn-success add_url px-3" name="file_url" onclick="addUrl()">Add URL</button>
+    </div>
+</div>
+
                         <!-- File Supported Text -->
                         <p class="file-supported text-center pt-3">File Supported: JPG, JPEG</p>
                     </div>
