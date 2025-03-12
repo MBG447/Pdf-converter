@@ -24,9 +24,12 @@
 
 .pdf-text{
     color: #1B1856;
+    padding-left: 25px;
+    padding-right: 20px;
 }
 .see-text{
     color: black;
+    padding-right: 35px;
 }
 .see-text:hover{
     color: red;
@@ -61,9 +64,13 @@ li {
 }
 .its{
    color: #1B1856; 
+   padding-left: 140px;
+   
 }
 .first-paragraph{
     font-size: 17px;
+    width: 100%;
+    margin-left: 90px !important;
 }
 
 .img-fluid{
@@ -72,7 +79,6 @@ li {
 }
 .home-page{
     padding-top: 30px;
-    padding-left: 150px !important;
 }
 .img-1{
     width: 50px !important;

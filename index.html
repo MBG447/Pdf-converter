@@ -51,21 +51,36 @@
         transform: translateY(6px) rotate(45deg);
     } */
 
-    
+    .home-page{
+        padding-right: 80px;
+    }
         
     @media (max-width: 1400px) {
             #navbarList.active {
             padding-left: 20px; /* Add space from the start */ }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             .banner-responsive {
             /* padding-left: 20px; /* Add space from the start */ 
             text-align: center;
-        } 
-        .first-paragraph{
+        }
+        .list-responsive{
+            border-width: 2px !important;
+            padding-left: 22px !important;
+            gap: 8px;
+            padding-bottom: 10px;
+        }
+        .its1{
+            background-color: red;
+            padding-right: 30px;
+        }
+       
+        .home-page{
+            background-color: brown;
         }
 
         }
+
 
     </style>
 </head>                                                         
@@ -80,7 +95,7 @@
     <i class="bi bi-list"></i>
 </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav list-responsive ms-auto">
                 <li class="nav-item pe-5">
                   <a class="nav-home active" aria-current="page" href="#Home">Home</a>
                 </li>
@@ -105,8 +120,8 @@
     <section>
         <div class="row">
            <div class="col-lg-5 col-md-4 col-sm-12 home-page">
-            <h1 class="its">ITS PDF</h1>
-            <p class="first-paragraph order-1">Converting files to and from PDF documents is pretty simple with the assistance of this online PDF converter. Itspdf entertains you with all popular PDF tools that you need to manage your PDF files. You can get a 100% free PDF converter that does not even require any additional program to process PDF files conversion.
+            <h1 class="its"><span class="its1">ITS PDF</span></h1>
+            <p class="first-paragraph order-1 mt-5 mt-md-3 mt-lg-0  px-3 px-md-5  text-center text-md-start">Converting files to and from PDF documents is pretty simple with the assistance of this online PDF converter. Itspdf entertains you with all popular PDF tools that you need to manage your PDF files. You can get a 100% free PDF converter that does not even require any additional program to process PDF files conversion.
 <br><br>
                 Just make a couple of clicks to merge, split, compress PDFs and let this tool much more with your PDFs. You don't have to set up anything, just drag and drop the compatible file to convert PDF right away.</p>
         </div>
@@ -127,7 +142,7 @@
             <div class="row">
                 <div class="d-flex justify-content-between justify-content-between align-items-center">
                     <h1 class="pdf-text">PDF Converters</h1>
-                    <a href="./tools.html" class="ms-auto see-text">see all></a>
+                    <a href="./tools.html" class="ms-auto see-text">see all ></a>
                 </div>
             </div> 
 
@@ -214,7 +229,7 @@
                     <h1 class="pdf-text">PDF Tools</h1>
                 </div>
                 <div class="col-lg-6 col-md-4 col-sm-6 text-end">
-                    <a href="./tools.html" class="ms-auto see-text pb-2 pt-5 ">see all></a>
+                    <a href="./tools.html" class="ms-auto see-text pb-2 pt-5 ">see all ></a>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 text-decoration">
