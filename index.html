@@ -17,12 +17,58 @@
 
     <title> Original </title>
     <style>
-        @media (max-width: 1400px) {
-  #navbarList.active {
-    padding-left: 20px; /* Add space from the start */
-  }
+        .custom-toggler {
+        background-color: darkgray; /* White background */
+        border: none;
+        padding: 10px;
+        border-radius: 10px; /* Circular shape */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      
+        transition: all 0.3s ease-in-out;
+    }
+    /* The three lines */
+    /* .toggler-icon {
+        width: 05px;
+        height: 3px; */
+        /* background-color: green !important; Line color */
+        /* border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+    } */
+
+
+    /* .custom-toggler:hover {
+        background-color: red; /* Light gray on hover */
+        /* transform: scale(1.1); Slight increase in size */
+    /* } */
+
+    /* .custom-toggler:focus {
+        outline: none; */
+        /* box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5); Blue glow focus */
+    /* }  */
+
+     /* When toggler is active (expanded) */
+     /* .custom-toggler[aria-expanded="true"] .toggler-icon:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    } */
+
+    
+        
+    @media (max-width: 1400px) {
+            #navbarList.active {
+            padding-left: 20px; /* Add space from the start */ }
+        }
+        @media (max-width: 768px) {
+            .banner-responsive {
+            /* padding-left: 20px; /* Add space from the start */ 
+            text-align: center;
+        } 
+        .first-paragraph{
+        }
+
+        }
+
     </style>
-</head>
+</head>                                                         
 <body>
 
 <section>
@@ -30,9 +76,9 @@
         <div class="container">
             <a href="/"><img src="./images/Navbar.PNG" "></a>
          <!-- Toggle Button for Mobile -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="bi bi-list"></i>
+</button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item pe-5">
@@ -48,6 +94,9 @@
                     <a class="nav-contact" href="./blog.html">Blog</a>
                 </li>
               </ul>
+              <div class="icon-menu">
+                
+              </div>
           </div>
         </div>
       </nav>
@@ -57,7 +106,7 @@
         <div class="row">
            <div class="col-lg-5 col-md-4 col-sm-12 home-page">
             <h1 class="its">ITS PDF</h1>
-            <p class="first-paragraph">Converting files to and from PDF documents is pretty simple with the assistance of this online PDF converter. Itspdf entertains you with all popular PDF tools that you need to manage your PDF files. You can get a 100% free PDF converter that does not even require any additional program to process PDF files conversion.
+            <p class="first-paragraph order-1">Converting files to and from PDF documents is pretty simple with the assistance of this online PDF converter. Itspdf entertains you with all popular PDF tools that you need to manage your PDF files. You can get a 100% free PDF converter that does not even require any additional program to process PDF files conversion.
 <br><br>
                 Just make a couple of clicks to merge, split, compress PDFs and let this tool much more with your PDFs. You don't have to set up anything, just drag and drop the compatible file to convert PDF right away.</p>
         </div>
@@ -65,8 +114,8 @@
 
         </div>
         <div class="col-lg-5 col-md-4 col-sm-12">
-            <div>
-                <img src="./images/banner.svg" width="300" height="200" class="img-fluid pt-5">
+            <div class="banner-responsive">
+                <img src="./images/banner.svg" class="order-ms-1" width="300" height="200" class="img-fluid pt-5">
 
             </div>
         </div>
